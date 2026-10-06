@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="PayMeBack support and contact."><title>PayMeBack Support</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one calm reading column with a section nav; green taken from the app icon. */
+:root{
+  --bg:#f4f7f2; --surface:#ffffff; --fg:#17211a; --muted:#56635a; --line:#d9e2d6;
+  --brand:#2e5e1e; --brand-ink:#ffffff; --tint:#e6efe1; --note:#fff6dc; --note-line:#e8d28a;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif; --body:'Public Sans','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1611; --surface:#161f18; --fg:#e6eee6; --muted:#9db0a1; --line:#2a382d;
+  --brand:#8fcf78; --brand-ink:#0f1611; --tint:#1d2a1f; --note:#2b2612; --note-line:#6b5a1e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1611; --surface:#161f18; --fg:#e6eee6; --muted:#9db0a1; --line:#2a382d;
+  --brand:#8fcf78; --brand-ink:#0f1611; --tint:#1d2a1f; --note:#2b2612; --note-line:#6b5a1e; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 var(--body);padding-inline:16px;padding-block:0}
+a{color:var(--brand)} a:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.wrap{max-width:46rem;margin-inline:auto;min-width:0}
+header.top{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;padding-block:1.25rem;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:.6rem;font:700 1.25rem var(--display);color:var(--fg);text-decoration:none}
+.logo i{width:2rem;height:2rem;border-radius:.5rem;background:var(--brand);display:grid;place-items:center}
+.logo svg{width:1.25rem;height:1.25rem;fill:var(--brand-ink)}
+nav.links{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;margin-left:auto;font-size:.95rem}
+nav.links a{color:var(--muted);text-decoration:none;font-weight:500} nav.links a:hover{color:var(--brand)}
+h1{font:700 clamp(2rem,6vw,3rem)/1.1 var(--display);letter-spacing:-.02em;margin:2.5rem 0 .75rem;text-wrap:balance}
+h2{font:600 1.5rem/1.25 var(--display);margin:0 0 .75rem;text-wrap:balance}
+h3{font:600 1.05rem var(--body);margin:1.4rem 0 .3rem}
+p,li{max-width:65ch} ul,ol{padding-left:1.2rem} li{margin:.3rem 0}
+.lede{font-size:1.2rem;color:var(--muted);max-width:55ch;margin:0 0 1.5rem}
+.meta{color:var(--muted);font-size:.9rem;margin:0 0 1.5rem}
+section{padding-block:2rem;border-top:1px solid var(--line);scroll-margin-top:1rem}
+.note{background:var(--note);border:1px solid var(--note-line);border-radius:.5rem;padding:.9rem 1.1rem;margin:1.25rem 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem;margin:1.25rem 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:1rem 1.15rem;min-width:0}
+.card h3{margin:0 0 .25rem} .card p{margin:0;color:var(--muted);font-size:.95rem}
+.table{overflow-x:auto;margin:1rem 0}
+table{border-collapse:collapse;width:100%;font-size:.95rem;min-width:30rem}
+th,td{text-align:left;padding:.6rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;background:var(--tint)}
+.pill{display:inline-block;background:var(--tint);color:var(--brand);border-radius:99px;padding:.15rem .7rem;font-size:.85rem;font-weight:600}
+footer{padding-block:2rem 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+code{background:var(--tint);padding:.1rem .35rem;border-radius:.25rem;font-size:.9em;word-break:break-all}
+.mail{font-weight:600;user-select:all;word-break:break-all}
+</style>
+</head><body><div class="wrap" id="top">
+<header class="top"><a class="logo" href="#top"><i><svg viewBox="0 0 108 108" aria-hidden="true"><path d="M54,30l20,11v4h-6v22h6v6h-40v-6h6v-22h-6v-4z"/></svg></i>PayMeBack</a><nav class="links" aria-label="Sections"><a href="https://cloudspacelearninganddevelopmentpvtltd.github.io/paymeback-site/index.html">Home</a><a href="https://cloudspacelearninganddevelopmentpvtltd.github.io/paymeback-site/privacy.html">Privacy</a><a href="https://cloudspacelearninganddevelopmentpvtltd.github.io/paymeback-site/terms.html">Terms</a><a href="https://cloudspacelearninganddevelopmentpvtltd.github.io/paymeback-site/refunds.html">Cancellation</a><a href="https://cloudspacelearninganddevelopmentpvtltd.github.io/paymeback-site/support.html">Support</a></nav></header>
+<main><h1>Support</h1><section style='border-top:0' id="support">
+<p>Email <span class="mail">punith.nagaraju@cdandlc.com</span>. We reply within 5 business days.</p>
+<h3>Why does the app say it cannot assess my state or country?</h3>
+<p>We only show an assessment where we hold verified law. Other places return "insufficient information" instead of a guess. Coverage is expanding.</p>
+<h3>Where are my letter and details stored?</h3>
+<p>On your phone only (identity details are encrypted). If you uninstall the app or choose Settings → Delete my data, they are gone and we cannot recover them.</p>
+<h3>I bought a letter but cannot see it.</h3>
+<p>Open the case from your cases list. If it still does not appear, email us with your Google Play order number.</p>
+<h3>How do I delete my data?</h3>
+<p>Settings → Delete my data in the app. Server-side data also deletes itself after 30 days.</p>
+<h3>Report a problem with the law</h3>
+<p>Laws change. If you think a citation is out of date, tell us the statute and jurisdiction and we will review it.</p></section></main>
+<footer><p>PayMeBack is not a law firm and does not provide legal advice. It generates informational documents you review and send yourself. Outcomes are not guaranteed.</p><p>PayMeBack is published by Cloudspace Learning and Development Private Limited. Contact: <span class="mail">punith.nagaraju@cdandlc.com</span></p></footer>
+</div>
+</body></html>
