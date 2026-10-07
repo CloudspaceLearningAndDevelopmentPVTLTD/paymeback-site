@@ -5,7 +5,8 @@ Usage: python build.py [PRIVACY_URL] [SITE_URL]
 import sys
 
 ORG = "Cloudspace Learning and Development Private Limited"
-EMAIL = "punith.nagaraju@cdandlc.com"
+EMAIL = "contact@cdandlc.com"          # privacy, terms, footer
+SUPPORT = "support@cdandlc.com"        # support and refund requests
 UPDATED = "6 October 2026"
 PRIVACY_URL = sys.argv[1] if len(sys.argv) > 1 else "#"
 SITE_URL = sys.argv[2] if len(sys.argv) > 2 else "#"
@@ -186,12 +187,12 @@ SITE = f"""
 <h3>How to request a refund</h3>
 <ol>
 <li>Requests within 48 hours of purchase can usually be made yourself in your Google Play order history (<code>play.google.com/store/account/orderhistory</code>): choose the order, then Report a problem.</li>
-<li>Otherwise, email <span class="mail">{EMAIL}</span> with the email on your Google Play account and your order number (it starts with <code>GPA.</code>). We reply within 5 business days. Approved refunds are issued through Google Play to your original payment method.</li>
+<li>Otherwise, email <span class="mail">{SUPPORT}</span> with the email on your Google Play account and your order number (it starts with <code>GPA.</code>). We reply within 5 business days. Approved refunds are issued through Google Play to your original payment method.</li>
 </ol>
 <p>Your statutory consumer rights are not affected by this policy.</p></section>
 
 <section id="support"><h2>Support</h2>
-<p>Email <span class="mail">{EMAIL}</span>. We reply within 5 business days.</p>
+<p>Email <span class="mail">{SUPPORT}</span>. We reply within 5 business days.</p>
 <h3>Why does the app say it cannot assess my state or country?</h3>
 <p>We only show an assessment where we hold verified law. Other places return "insufficient information" instead of a guess. Coverage is expanding.</p>
 <h3>Where are my letter and details stored?</h3>
