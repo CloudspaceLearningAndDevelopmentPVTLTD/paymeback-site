@@ -33,8 +33,7 @@ a{color:var(--brand)} a:focus-visible{outline:3px solid var(--brand);outline-off
 .wrap{max-width:46rem;margin-inline:auto;min-width:0}
 header.top{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;padding-block:1.25rem;border-bottom:1px solid var(--line)}
 .logo{display:flex;align-items:center;gap:.6rem;font:700 1.25rem var(--display);color:var(--fg);text-decoration:none}
-.logo i{width:2rem;height:2rem;border-radius:.5rem;background:var(--brand);display:grid;place-items:center}
-.logo svg{width:1.25rem;height:1.25rem;fill:var(--brand-ink)}
+.logo img{width:2.25rem;height:2.25rem;border-radius:.55rem;display:block}
 nav.links{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;margin-left:auto;font-size:.95rem}
 nav.links a{color:var(--muted);text-decoration:none;font-weight:500} nav.links a:hover{color:var(--brand)}
 h1{font:700 clamp(2rem,6vw,3rem)/1.1 var(--display);letter-spacing:-.02em;margin:2.5rem 0 .75rem;text-wrap:balance}
@@ -59,8 +58,8 @@ code{background:var(--tint);padding:.1rem .35rem;border-radius:.25rem;font-size:
 </style>"""
 
 LOGO = (
-    '<a class="logo" href="#top"><i><svg viewBox="0 0 108 108" aria-hidden="true">'
-    '<path d="M54,30l20,11v4h-6v22h6v6h-40v-6h6v-22h-6v-4z"/></svg></i>PayMeBack</a>'
+    '<a class="logo" href="#top"><img src="logo-192.png" width="36" height="36" alt="" '
+    'decoding="async">PayMeBack</a>'
 )
 DISCLAIMER = (
     "PayMeBack is not a law firm and does not provide legal advice. It generates "
@@ -73,7 +72,7 @@ FOOT = (
 
 PRIVACY = f"""
 <h1>Privacy Policy</h1>
-<p class="meta">PayMeBack for Android · Last updated {UPDATED}</p>
+<p class="meta">PayMeBack for iOS and Android · Last updated {UPDATED}</p>
 <p class="lede">Your name and details stay on your phone. Our servers only ever see the facts of your dispute.</p>
 <p>This policy explains what the PayMeBack app ("PayMeBack", "the app") collects, why, and what you can do about it. PayMeBack is published by <strong>{ORG}</strong> ("we", "us"), the party responsible for the data described under "What our servers receive". Questions: <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+91 821 3292 0587</a>.</p>
 
@@ -89,30 +88,31 @@ PRIVACY = f"""
 <p>Your demand letter is assembled on your device by merging a template with these details. We never learn who you or the other party are.</p></section>
 
 <section id="servers"><h2>What our servers receive</h2>
-<p>When you ask for a claim assessment, the app sends only de-identified facts:</p>
+<p><strong>In the current version, nothing about your dispute is sent to us.</strong> Your claim assessment, statute references, demand letter and escalation checklist are produced on your device from a statute database that is bundled inside the app. We run no account system and keep no server-side copy of your case.</p>
+<p>If a future version offers an online assessment service, it will send only de-identified facts, and this policy will be updated before that happens:</p>
 <ul>
 <li>The dispute category (for example, security deposit) and your state or region</li>
 <li>Amounts, dates and your answers to the intake questions</li>
 <li>Your written description, after the app removes names, addresses, phone numbers, emails and reference numbers on your device</li>
 <li>An anonymous session identifier, not linked to your name or account</li>
-<li>If you buy something, the purchase token from Google Play, used to confirm you own the purchase</li>
 </ul>
-<div class="note"><strong>Check the preview.</strong> Before anything is sent, the app shows you the exact request on a "What will be sent" screen. Automatic redaction is good but not perfect, and may miss some names or unusual identifiers. Review the preview and edit your description if anything identifying remains.</div>
-<p>We use this data only to produce your assessment, statute references, letter template and escalation checklist, and to confirm purchases. We do not sell it, share it for advertising, or use it to profile you.</p></section>
+<p>Purchases are processed by Apple (App Store) or Google (Google Play). They tell the app whether you own a purchase. We do not receive your name, card or payment details.</p>
+<div class="note"><strong>Check the preview.</strong> Before an assessment, the app shows you exactly what information is used on a preview screen. Automatic redaction is good but not perfect, and may miss some names or unusual identifiers. Review the preview and edit your description if anything identifying remains.</div></section>
 
 <section id="retention"><h2>Retention and deletion</h2>
-<p>Server-side case data is deleted automatically after 30 days. You can delete everything sooner at any time: open <strong>Settings → Delete my data</strong>. This erases your local profile and cases and deletes your server-side session immediately. Uninstalling the app also removes local data. Because we do not hold your name or account, we cannot look you up by identity. To request deletion by other means, email us and include the anonymous session identifier if you still have it.</p></section>
+<p>Your data lives on your device until you remove it. Delete everything at any time: open <strong>Settings → Delete my data</strong>. This erases your local profile, cases and reminders. Uninstalling the app also removes local data. Because we do not hold your name or account, we cannot look you up by identity. If an online assessment service is introduced, server-side case data will be deleted automatically after 30 days and "Delete my data" will also delete it immediately.</p></section>
 
 <section id="services"><h2>Services and permissions</h2>
 <div class="table"><table>
 <thead><tr><th>Item</th><th>Why</th><th>How it is handled</th></tr></thead>
 <tbody>
-<tr><td>Microphone (optional)</td><td>Dictate your description instead of typing.</td><td>Uses Android's speech recognizer, set to prefer on-device recognition. If your device has no offline language pack, Android may use its own speech service (for example, Google's), under that provider's privacy policy. We never receive your audio.</td></tr>
-<tr><td>Text recognition (OCR)</td><td>Read text from documents you import.</td><td>Runs on your device with Google ML Kit. Images and PDFs are never uploaded.</td></tr>
-<tr><td>Name and address detection</td><td>Help redact your description.</td><td>Google ML Kit entity extraction runs on your device. Its language model is downloaded from Google when first needed.</td></tr>
+<tr><td>Microphone and speech recognition (optional)</td><td>Dictate your description instead of typing.</td><td>On iOS, uses Apple's speech recognizer set to on-device recognition. On Android, uses the system speech recognizer set to prefer on-device recognition; if your device has no offline language pack, Android may use its own speech service (for example, Google's), under that provider's privacy policy. We never receive your audio.</td></tr>
+<tr><td>Camera and photos (optional)</td><td>Scan or import evidence documents.</td><td>Images are read on your device and are never uploaded.</td></tr>
+<tr><td>Text recognition (OCR)</td><td>Read text from documents you import.</td><td>Runs on your device (Apple Vision on iOS, Google ML Kit on Android). Images and PDFs are never uploaded.</td></tr>
+<tr><td>Name and address detection</td><td>Help redact your description.</td><td>Runs on your device using built-in rules plus Apple's on-device language framework (iOS) or Google ML Kit entity extraction (Android, whose language model is downloaded from Google when first needed).</td></tr>
 <tr><td>Notifications</td><td>Remind you about letter and filing deadlines.</td><td>Scheduled locally on your device. No data is sent for this.</td></tr>
-<tr><td>Google Play Billing</td><td>Purchases and subscriptions.</td><td>Payment is handled entirely by Google Play. We never see your card details.</td></tr>
-<tr><td>Network access</td><td>Request assessments over HTTPS.</td><td>Requests are encrypted in transit.</td></tr>
+<tr><td>App Store / Google Play billing</td><td>Purchases and subscriptions.</td><td>Payment is handled entirely by Apple or Google. We never see your card details.</td></tr>
+<tr><td>Network access</td><td>Only for purchases handled by Apple or Google.</td><td>The app does not send your dispute information over the network.</td></tr>
 </tbody></table></div></section>
 
 <section id="not"><h2>What we do not do</h2>
@@ -124,7 +124,7 @@ PRIVACY = f"""
 </ul></section>
 
 <section id="security"><h2>Security</h2>
-<p>Your identity details are encrypted on your device with a key held in the Android Keystore. Cases are kept in the app's private storage, and the app disables Android cloud backup so neither is copied elsewhere. Network traffic uses HTTPS. No method is perfectly secure, so please keep your device locked and updated.</p></section>
+<p>Your identity details are stored in the app's private storage and protected by your device: iOS Data Protection (files are encrypted while the device is locked) and, on Android, encryption with a key held in the Android Keystore. Android cloud backup is disabled so your details are not copied elsewhere. No method is perfectly secure, so please keep your device locked and updated.</p></section>
 
 <section id="rights"><h2>Your rights</h2>
 <p>Depending on where you live (for example, under the GDPR, the UK GDPR, India's Digital Personal Data Protection Act or US state privacy laws), you may have rights to access, correct, delete or port personal data, and to object to or restrict processing. Because the app is designed so that we hold no direct identifiers, most requests are answered by the in-app "Delete my data" control. For anything else, email <span class="mail">{EMAIL}</span> and we will respond within 30 days.</p></section>
@@ -139,7 +139,7 @@ PRIVACY = f"""
 SITE = f"""
 <h1>Get your money back, with the actual law behind you.</h1>
 <p class="lede">PayMeBack gives you a free claim assessment citing the real statute, then a demand letter, an escalation checklist and deadline reminders. Your personal details never leave your phone.</p>
-<p><span class="pill">Android · Coming soon to Google Play</span></p>
+<p><span class="pill">iPhone and Android · Coming soon to the App Store and Google Play</span></p>
 
 <section id="what"><h2>What it does</h2>
 <div class="grid">
@@ -163,7 +163,9 @@ SITE = f"""
 <h3>Eligibility and acceptable use</h3>
 <p>You must be 18 or older. Use the app only for genuine disputes of your own, with truthful information. Do not use it to harass, threaten or defraud anyone.</p>
 <h3>Purchases</h3>
-<p>Letter packets and Pro subscriptions are sold through Google Play and are subject to Google Play's payment terms and to our <a href="#refunds">Cancellation and Refund Policy</a>.</p>
+<p>Letter packets and Pro subscriptions are sold through the Apple App Store or Google Play, depending on your device, and are subject to that store's payment terms and to our <a href="#refunds">Cancellation and Refund Policy</a>.</p>
+<h3>Apple App Store terms (iPhone)</h3>
+<p>If you use PayMeBack on an iPhone, these terms are between you and {ORG}, not Apple. Apple's Standard License Agreement (<code>apple.com/legal/internet-services/itunes/dev/stdeula</code>) also applies. Apple has no obligation to provide maintenance or support for the app, is not responsible for any claim relating to it, and is a third-party beneficiary of these terms.</p>
 <h3>Limitation of liability</h3>
 <p>To the maximum extent permitted by law, {ORG} is not liable for the outcome of any dispute, court decision, or action taken using generated documents, or for indirect or consequential losses. Nothing here limits rights you have under mandatory consumer law.</p>
 <h3>Changes</h3>
@@ -173,9 +175,9 @@ SITE = f"""
 <p class="meta">Last updated {UPDATED}</p>
 <h3>Pro subscription ($9.99 per month)</h3>
 <ul>
-<li><strong>Cancel anytime.</strong> Open Google Play, tap your profile icon, then Payments and subscriptions, then Subscriptions, choose PayMeBack and tap Cancel subscription. You can also cancel from the PayMeBack page in the Play Store.</li>
+<li><strong>Cancel anytime.</strong> <em>iPhone:</em> open Settings, tap your name, then Subscriptions, choose PayMeBack and tap Cancel Subscription. <em>Android:</em> open Google Play, tap your profile icon, then Payments and subscriptions, then Subscriptions, choose PayMeBack and tap Cancel subscription.</li>
 <li>Cancelling stops future renewals. You keep Pro access until the end of the period you already paid for.</li>
-<li>Uninstalling the app does <strong>not</strong> cancel the subscription. You must cancel in Google Play.</li>
+<li>Uninstalling the app does <strong>not</strong> cancel the subscription. You must cancel in your Apple ID or Google Play subscriptions.</li>
 <li>We do not give partial refunds for unused time in a billing period, except where required by law.</li>
 </ul>
 <h3>Demand letter packet ($14.99 per case)</h3>
@@ -186,21 +188,21 @@ SITE = f"""
 </ul>
 <h3>How to request a refund</h3>
 <ol>
-<li>Requests within 48 hours of purchase can usually be made yourself in your Google Play order history (<code>play.google.com/store/account/orderhistory</code>): choose the order, then Report a problem.</li>
-<li>Otherwise, email <span class="mail">{SUPPORT}</span> with the email on your Google Play account and your order number (it starts with <code>GPA.</code>). We reply within 5 business days. Approved refunds are issued through Google Play to your original payment method.</li>
+<li><em>iPhone:</em> Apple processes refunds for App Store purchases. Go to <code>reportaproblem.apple.com</code>, sign in, choose the purchase and tap Request a refund. We cannot issue refunds for App Store purchases ourselves, but we will support your request if you email us.</li>
+<li><em>Android:</em> requests within 48 hours of purchase can usually be made yourself in your Google Play order history (<code>play.google.com/store/account/orderhistory</code>): choose the order, then Report a problem. Otherwise, email <span class="mail">{SUPPORT}</span> with the email on your Google Play account and your order number (it starts with <code>GPA.</code>). We reply within 5 business days. Approved refunds are issued through Google Play to your original payment method.</li>
 </ol>
 <p>Your statutory consumer rights are not affected by this policy.</p></section>
 
 <section id="support"><h2>Support</h2>
 <p>Email <span class="mail">{SUPPORT}</span> · <a href="tel:+9182132920587">+91 821 3292 0587</a>. We reply within 5 business days.</p>
 <h3>Why does the app say it cannot assess my state or country?</h3>
-<p>We only show an assessment where we hold verified law. Other places return "insufficient information" instead of a guess. Coverage is expanding.</p>
+<p>We only show an assessment where we hold verified law. Other places return "more info needed" instead of a guess. Coverage is expanding.</p>
 <h3>Where are my letter and details stored?</h3>
 <p>On your phone only (identity details are encrypted). If you uninstall the app or choose Settings → Delete my data, they are gone and we cannot recover them.</p>
 <h3>I bought a letter but cannot see it.</h3>
-<p>Open the case from your cases list. If it still does not appear, email us with your Google Play order number.</p>
+<p>Open the case from your cases list. If it still does not appear, try Restore purchases on the paywall screen, then email us with your App Store or Google Play order number.</p>
 <h3>How do I delete my data?</h3>
-<p>Settings → Delete my data in the app. Server-side data also deletes itself after 30 days.</p>
+<p>Settings → Delete my data in the app. This erases your profile, cases and reminders from your device.</p>
 <h3>Report a problem with the law</h3>
 <p>Laws change. If you think a citation is out of date, tell us the statute and jurisdiction and we will review it.</p></section>
 """
