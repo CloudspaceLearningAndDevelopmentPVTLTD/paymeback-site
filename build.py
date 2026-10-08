@@ -6,7 +6,7 @@ import sys
 
 ORG = "Cloudspace Learning and Development Private Limited"
 EMAIL = "contact@cdandlc.com"          # privacy, terms, footer
-SUPPORT = "support@cdandlc.com"        # support and refund requests
+SUPPORT = "contact@cdandlc.com"        # support and refund requests
 UPDATED = "6 October 2026"
 PRIVACY_URL = sys.argv[1] if len(sys.argv) > 1 else "#"
 SITE_URL = sys.argv[2] if len(sys.argv) > 2 else "#"
