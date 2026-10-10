@@ -67,14 +67,14 @@ DISCLAIMER = (
 )
 FOOT = (
     f'<footer><p>{DISCLAIMER}</p><p>PayMeBack is published by {ORG}. '
-    f'Contact: <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+91 821 3292 0587</a></p></footer>'
+    f'Contact: <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+9182132920587</a></p></footer>'
 )
 
 PRIVACY = f"""
 <h1>Privacy Policy</h1>
 <p class="meta">PayMeBack for iOS and Android · Last updated {UPDATED}</p>
 <p class="lede">Your name and details stay on your phone. Our servers only ever see the facts of your dispute.</p>
-<p>This policy explains what the PayMeBack app ("PayMeBack", "the app") collects, why, and what you can do about it. PayMeBack is published by <strong>{ORG}</strong> ("we", "us"), the party responsible for the data described under "What our servers receive". Questions: <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+91 821 3292 0587</a>.</p>
+<p>This policy explains what the PayMeBack app ("PayMeBack", "the app") collects, why, and what you can do about it. PayMeBack is published by <strong>{ORG}</strong> ("we", "us"), the party responsible for the data described under "What our servers receive". Questions: <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+9182132920587</a>.</p>
 
 <section id="stays"><h2>What stays on your device</h2>
 <p>These items are stored only on your phone and are never uploaded. Your identity details are kept in encrypted storage:</p>
@@ -133,7 +133,7 @@ PRIVACY = f"""
 <p>PayMeBack is for adults aged 18 and over and is not directed at children. We do not knowingly collect data from children.</p></section>
 
 <section id="changes"><h2>Changes and contact</h2>
-<p>If we change this policy, we will update the date above and, for material changes, notify you in the app. Contact: {ORG}, <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+91 821 3292 0587</a>.</p></section>
+<p>If we change this policy, we will update the date above and, for material changes, notify you in the app. Contact: {ORG}, <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+9182132920587</a>.</p></section>
 """
 
 SITE = f"""
@@ -169,7 +169,7 @@ SITE = f"""
 <h3>Limitation of liability</h3>
 <p>To the maximum extent permitted by law, {ORG} is not liable for the outcome of any dispute, court decision, or action taken using generated documents, or for indirect or consequential losses. Nothing here limits rights you have under mandatory consumer law.</p>
 <h3>Changes</h3>
-<p>We may update these terms. Continued use after an update means you accept it. Contact: <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+91 821 3292 0587</a>.</p></section>
+<p>We may update these terms. Continued use after an update means you accept it. Contact: <span class="mail">{EMAIL}</span> · <a href="tel:+9182132920587">+9182132920587</a>.</p></section>
 
 <section id="refunds"><h2>Cancellation and Refund Policy</h2>
 <p class="meta">Last updated {UPDATED}</p>
@@ -194,7 +194,7 @@ SITE = f"""
 <p>Your statutory consumer rights are not affected by this policy.</p></section>
 
 <section id="support"><h2>Support</h2>
-<p>Email <span class="mail">{SUPPORT}</span> · <a href="tel:+9182132920587">+91 821 3292 0587</a>. We reply within 5 business days.</p>
+<p>Email <span class="mail">{SUPPORT}</span> · <a href="tel:+9182132920587">+9182132920587</a>. We reply within 5 business days.</p>
 <h3>Why does the app say it cannot assess my state or country?</h3>
 <p>We only show an assessment where we hold verified law. Other places return "more info needed" instead of a guess. Coverage is expanding.</p>
 <h3>Where are my letter and details stored?</h3>
