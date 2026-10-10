@@ -73,7 +73,7 @@ code{background:var(--tint);padding:.1rem .35rem;border-radius:.25rem;font-size:
 <li>Your written description, after the app removes names, addresses, phone numbers, emails and reference numbers on your device</li>
 <li>An anonymous session identifier, not linked to your name or account</li>
 </ul>
-<p>Purchases are processed by Apple (App Store) or Google (Google Play). They tell the app whether you own a purchase. We do not receive your name, card or payment details.</p>
+<p>Purchases are processed by Apple (App Store) or Google (Google Play). They tell the app whether you own a purchase. We do not receive your name, card or payment details. To confirm that a purchase is genuine, versions of the app that have online purchase verification turned on send the signed purchase receipt from Apple or Google, and for a one-time letter a random case ID that contains no personal details, to our verification service. This contains no name, dispute information or device identifiers. We keep only a one-way hash of the receipt, so one letter purchase cannot be reused for many cases.</p>
 <div class="note"><strong>Check the preview.</strong> Before an assessment, the app shows you exactly what information is used on a preview screen. Automatic redaction is good but not perfect, and may miss some names or unusual identifiers. Review the preview and edit your description if anything identifying remains.</div></section>
 
 <section id="retention"><h2>Retention and deletion</h2>
@@ -89,7 +89,7 @@ code{background:var(--tint);padding:.1rem .35rem;border-radius:.25rem;font-size:
 <tr><td>Name and address detection</td><td>Help redact your description.</td><td>Runs on your device using built-in rules plus Apple's on-device language framework (iOS) or Google ML Kit entity extraction (Android, whose language model is downloaded from Google when first needed).</td></tr>
 <tr><td>Notifications</td><td>Remind you about letter and filing deadlines.</td><td>Scheduled locally on your device. No data is sent for this.</td></tr>
 <tr><td>App Store / Google Play billing</td><td>Purchases and subscriptions.</td><td>Payment is handled entirely by Apple or Google. We never see your card details.</td></tr>
-<tr><td>Network access</td><td>Only for purchases handled by Apple or Google.</td><td>The app does not send your dispute information over the network.</td></tr>
+<tr><td>Network access</td><td>Only to complete and confirm purchases.</td><td>The app does not send your dispute information over the network.</td></tr>
 </tbody></table></div></section>
 
 <section id="not"><h2>What we do not do</h2>
